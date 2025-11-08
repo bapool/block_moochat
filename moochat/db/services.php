@@ -6,7 +6,7 @@
 // the Free Software Foundation, either version 3 of the License, or
 // any later version.
 /**
- * Privacy Subsystem implementation for mod_mooproof
+ * External services definition for block_moochat
  *
  * @package    block_moochat
  * @copyright  2025 Brian A. Pool
@@ -15,8 +15,13 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'block_moochat';
-$plugin->version = 2025110802;  // YYYYMMDDXX - Added Privacy Provider
-$plugin->requires = 2022041900; // Moodle 4.0
-$plugin->maturity = MATURITY_BETA;
-$plugin->release = 'v1.2';
+$functions = [
+    'block_moochat_send_message' => [
+        'classname'   => 'block_moochat\external\send_message',
+        'methodname'  => 'execute',
+        'description' => 'Send a message to the AI chatbot',
+        'type'        => 'write',
+        'ajax'        => true,
+        'loginrequired' => true,
+    ],
+];

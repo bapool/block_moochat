@@ -4,7 +4,14 @@
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
+// any later version.
+/**
+ * Privacy Subsystem implementation for mod_mooproof
+ *
+ * @package    block_moochat
+ * @copyright  2025 Brian A. Pool
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
 defined('MOODLE_INTERNAL') || die();
 
@@ -168,15 +175,22 @@ class block_moochat extends block_base {
         return $output;
     }
     
-    private function get_chat_interface() {
+private function get_chat_interface() {
         global $PAGE;
         
         $config = $this->config;
         $instanceid = $this->instance->id;
         
-        // Include required JavaScript
-        $PAGE->requires->js_call_amd('block_moochat/chat', 'init', array($instanceid));
+        // Prepare language strings for JavaScript
+        $strings = array(
+            'questionsremaining' => get_string('questionsremaining', 'block_moochat'),
+            'chatcleared' => get_string('chatcleared', 'block_moochat'),
+            'confirmclear' => get_string('confirmclear', 'block_moochat')
+        );
         
+        // Include required JavaScript
+        $PAGE->requires->js_call_amd('block_moochat/chat', 'init', array($instanceid, $strings));
+                
         $output = html_writer::start_div('moochat-interface', array('id' => 'moochat-' . $instanceid));
         
         // Chat display area

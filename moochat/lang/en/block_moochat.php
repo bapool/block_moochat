@@ -1,6 +1,18 @@
 <?php
 // This file is part of Moodle - http://moodle.org/
-
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// any later version.
+/**
+ * Privacy Subsystem implementation for mod_mooproof
+ *
+ * @package    block_moochat
+ * @copyright  2025 Brian A. Pool
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+ 
 defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'MooChat';
@@ -55,9 +67,19 @@ $string['send'] = 'Send';
 $string['clear'] = 'Clear Chat';
 $string['maxmessagesreached'] = 'You have reached the maximum number of messages for this session.';
 $string['thinking'] = 'Thinking...';
+$string['chatcleared'] = 'Chat cleared. Start a new conversation!';
+$string['confirmclear'] = 'Clear all messages? (Your question limit will not reset)';
 
+// Settings
 // Settings
 $string['ollama_endpoint'] = 'Ollama API Endpoint';
 $string['ollama_endpoint_desc'] = 'URL of your Ollama server API endpoint (e.g., https://blazerai.nationaltrail.us/ollama/v1/chat/completions)';
 $string['default_model'] = 'Default AI Model';
 $string['default_model_desc'] = 'Default model to use (e.g., llama2:latest, tinyllama:latest, gemma2:latest)';
+// Privacy API
+$string['privacy:metadata:block_moochat_usage'] = 'Information about the user\'s chat usage and rate limiting.';
+$string['privacy:metadata:block_moochat_usage:userid'] = 'The ID of the user.';
+$string['privacy:metadata:block_moochat_usage:instanceid'] = 'The block instance ID.';
+$string['privacy:metadata:block_moochat_usage:messagecount'] = 'Number of messages sent by the user.';
+$string['privacy:metadata:block_moochat_usage:firstmessage'] = 'Timestamp of the first message in the current period.';
+$string['privacy:metadata:block_moochat_usage:lastmessage'] = 'Timestamp of the last message sent.';
