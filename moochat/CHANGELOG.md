@@ -1,6 +1,28 @@
 # Changelog for block_moochat
 
 All notable changes to this project will be documented in this file.
+## [Version 1.3] - 2025-11-13
+
+### Fixed
+- **Removed all hard-coded strings from JavaScript** (Moodle plugin requirement)
+  - Fixed hard-coded "Thinking..." message
+  - Fixed hard-coded "Rate Limit Reached" alert title
+  - Fixed hard-coded "Error" alert titles
+  - Fixed hard-coded "Failed to connect to AI service" message
+  - All strings now properly loaded from language file via PHP
+
+### Changed
+- **Improved user experience for chat limit messages**
+  - Changed generic "Error" title to "Chat Limit Reached" for max messages
+  - Updated message to be more user-friendly and actionable
+  - Added `chatlimitreached` and `maxmessagesreached` language strings
+
+### Technical Details
+- Updated `block_moochat.php` to pass all UI strings to JavaScript
+- Modified `amd/src/chat.js` to use `strings` parameter for all user-facing text
+- Compiled JavaScript using grunt for Moodle standards compliance
+- Fixed code style issues (tabs, trailing spaces, mixed indentation)
+- Removed unused `messageCount` variable
 
 ## [Version 1.2] - 2025-11-08
 

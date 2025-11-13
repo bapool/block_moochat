@@ -59,16 +59,20 @@ $string['questionsremaining'] = 'Questions remaining: {$a}';
 $string['ratelimitreached'] = 'You have reached your limit of {$a->limit} questions {$a->period}. Please try again later.';
 $string['ratelimitreached_hour'] = 'per hour';
 $string['ratelimitreached_day'] = 'per day';
+$string['ratelimitreached_title'] = 'Rate Limit Reached';
 
 // Chat interface
 $string['startchat'] = 'Start chatting with the AI assistant!';
 $string['typemessage'] = 'Type your message here...';
 $string['send'] = 'Send';
 $string['clear'] = 'Clear Chat';
-$string['maxmessagesreached'] = 'You have reached the maximum number of messages for this session.';
+$string['chatlimitreached'] = 'Chat Limit Reached';
+$string['maxmessagesreached'] = 'You have reached the maximum number of messages for this chat session. Please clear the chat to start a new conversation.';
 $string['thinking'] = 'Thinking...';
 $string['chatcleared'] = 'Chat cleared. Start a new conversation!';
 $string['confirmclear'] = 'Clear all messages? (Your question limit will not reset)';
+$string['error'] = 'Error';
+$string['connectionerror'] = 'Failed to connect to AI service';
 
 // Settings
 // Settings

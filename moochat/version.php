@@ -16,7 +16,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'block_moochat';
-$plugin->version = 2025110802;  // YYYYMMDDXX - Added Privacy Provider
 $plugin->requires = 2022041900; // Moodle 4.0
+$plugin->version = 2025111300;  // YYYYMMDDXX - Fixed language strings and compiled JavaScript
 $plugin->maturity = MATURITY_BETA;
-$plugin->release = 'v1.2';
+$plugin->release = 'v1.3';

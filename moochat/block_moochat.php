@@ -182,10 +182,16 @@ private function get_chat_interface() {
         $instanceid = $this->instance->id;
         
         // Prepare language strings for JavaScript
-        $strings = array(
+       $strings = array(
             'questionsremaining' => get_string('questionsremaining', 'block_moochat'),
             'chatcleared' => get_string('chatcleared', 'block_moochat'),
-            'confirmclear' => get_string('confirmclear', 'block_moochat')
+            'confirmclear' => get_string('confirmclear', 'block_moochat'),
+            'thinking' => get_string('thinking', 'block_moochat'),
+            'ratelimitreached_title' => get_string('ratelimitreached_title', 'block_moochat'),
+            'error' => get_string('error', 'block_moochat'),
+            'connectionerror' => get_string('connectionerror', 'block_moochat'),
+            'chatlimitreached' => get_string('chatlimitreached', 'block_moochat'),
+            'maxmessagesreached' => get_string('maxmessagesreached', 'block_moochat')
         );
         
         // Include required JavaScript

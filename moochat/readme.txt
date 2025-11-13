@@ -7,7 +7,7 @@ Organization: National Trail Local Schools
 Email: bpool@nationaltrail.us
 Version: 1.1
 License: GNU GPL v3 or later
-Moodle Required: 4.0 or higher
+Moodle Required: 4.5 or higher
 
 ==============================================================================
 DESCRIPTION
@@ -43,7 +43,7 @@ KEY FEATURES
 SYSTEM REQUIREMENTS
 ==============================================================================
 
-- Moodle 4.0 or higher
+- Moodle 4.5 or higher
 - PHP 8.0 or higher
 - MySQL 5.7+ or MariaDB 10.2+ or PostgreSQL 9.6+
 - Moodle Core AI Subsystem configured with at least one AI provider
